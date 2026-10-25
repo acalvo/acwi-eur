@@ -1,0 +1,29 @@
+:root{--bg:#f6f7f9;--card:#fff;--text:#1a1d21;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--pos:#15803d;--neg:#b91c1c;--posbg:21,128,61;--negbg:185,28,28}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--text:#e8eaed;--muted:#9aa0a9;--line:#2a2f38;--accent:#60a5fa;--pos:#4ade80;--neg:#f87171;--posbg:74,222,128;--negbg:248,113,113}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 48px}
+h1{margin:0;font-size:1.6rem}h1 span{color:var(--muted);font-weight:400}
+h2{margin:0 0 12px;font-size:1.05rem}
+#meta{margin:4px 0 16px;color:var(--muted);font-size:.85rem}
+.periods{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.periods button{border:1px solid var(--line);background:var(--card);color:var(--text);padding:6px 12px;border-radius:999px;font:inherit;cursor:pointer}
+.periods button[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.headline{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+.headline strong{font-size:1.7rem;font-variant-numeric:tabular-nums}
+.chg{font-weight:600}.pos{color:var(--pos)}.neg{color:var(--neg)}
+.chart{position:relative;height:340px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi small{display:block;color:var(--muted);font-size:.78rem}
+.kpi b{font-size:1.2rem;font-variant-numeric:tabular-nums}
+.kpi i{display:block;font-style:normal;color:var(--muted);font-size:.75rem}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.82rem;font-variant-numeric:tabular-nums;min-width:760px}
+th,td{padding:5px 6px;text-align:right;white-space:nowrap}
+th{color:var(--muted);font-weight:600;position:sticky;top:0}
+th:first-child,td:first-child{text-align:left;font-weight:600;position:sticky;left:0;background:var(--card)}
+td.year{border-left:1px solid var(--line);font-weight:700}
+td.empty{color:var(--line)}
+footer{color:var(--muted);font-size:.78rem}

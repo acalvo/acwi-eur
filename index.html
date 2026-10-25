@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSCI ACWI en EUR</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>MSCI ACWI <span>en euros</span></h1>
+    <p id="meta"></p>
+  </header>
+
+  <div class="periods" id="periods" role="tablist"></div>
+
+  <section class="card">
+    <div class="headline"><strong id="last">–</strong><span id="change" class="chg"></span></div>
+    <div class="chart"><canvas id="chart"></canvas></div>
+  </section>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="card">
+    <h2>Rentabilidad mensual</h2>
+    <div class="table-wrap"><table id="monthly"></table></div>
+  </section>
+
+  <footer>
+    Serie aproximada de retorno total (dividendos reinvertidos), base 100 = 4-ene-1999. Índice MSCI ACWI (precio) + dividendo estimado hasta 2008,
+    ETF iShares MSCI ACWI (<code>ACWI</code>) desde entonces, convertido a EUR con el tipo de cambio de referencia del BCE.
+    Puede diferir del índice real por tracking error y comisiones. Solo informativo.
+  </footer>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
